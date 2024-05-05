@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text to Video</title>
+</head>
+<body>
+    <h1>Text to Binary Video Generator</h1>
+    <form method="post">
+        <label for="text">Enter text:</label>
+        <input type="text" id="text" name="text" required>
+        <button type="submit">Generate Video</button>
+    </form>
+    {% if video_exists %}
+        <video controls src="{{ url_for('static', filename='output_video.mp4') }}" autoplay></video>
+    {% endif %}
+</body>
+</html>
+
